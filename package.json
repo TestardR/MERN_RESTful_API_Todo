@@ -1,0 +1,7 @@
+{
+  "name": "Todo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Romain <rmtestard@gmail.com>",
+  "license": "MIT"
+}
