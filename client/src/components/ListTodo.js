@@ -6,8 +6,15 @@ const ListTodo = ({ todos, deleteTodo }) => {
       {todos && todos.length > 0 ? (
         todos.map(todo => {
           return (
-            <li key={todo._id} onClick={() => deleteTodo(todo._id)}>
+            <li key={todo._id}>
               {todo.action}
+              <button
+                style={{ float: 'right' }}
+                onClick={() => deleteTodo(todo._id)}
+              >
+                Remove
+              </button>
+              <button style={{ float: 'right' }}>Update</button>
             </li>
           );
         })
