@@ -21,6 +21,12 @@ router.post('/todos', (req, res, next) => {
   }
 });
 
+router.put('/todos/:id', (req, res, next) => {
+  Todo.findByIdAndUpdate({ _id: req.params.id }, { $set: req.body })
+    .then(res.send('Updated'))
+    .catch(next);
+});
+
 router.delete('/todos/:id', (req, res, next) => {
   Todo.findOneAndDelete({ _id: req.params.id })
     .then(data => res.json(data))

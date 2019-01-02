@@ -34,8 +34,9 @@ app.use(bodyParser.json());
 
 app.use('/api', routes);
 
-app.use((req, res, next) => {
-  res.send('Welcome to Express');
+app.use((err, req, res, next) => {
+  console.log(err);
+  next();
 });
 
 app.listen(port, () => {

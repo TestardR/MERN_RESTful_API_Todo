@@ -9,6 +9,10 @@ class Todo extends Component {
     todos: []
   };
 
+  componentDidMount() {
+    this.getTodos();
+  }
+
   getTodos = () => {
     axios
       .get('/api/todos')
