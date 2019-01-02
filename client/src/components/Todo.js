@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Input from './Input';
 import ListTodo from './ListTodo';
+import Form from './Form';
 
 class Todo extends Component {
   state = {
@@ -44,6 +45,7 @@ class Todo extends Component {
         <h1>My Todo(s)</h1>
         <Input getTodos={this.getTodos} />
         <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
+        <Form />
       </div>
     );
   }
